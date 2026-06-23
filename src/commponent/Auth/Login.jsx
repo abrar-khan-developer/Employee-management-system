@@ -1,21 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Login() {
+  const submitHandler = (e) => {
+    e.preventDefault()
+    console.log('email is',email)
+    console.log('password is',password)
+    setEmail('')
+    setPassword('')
+  }
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   return (
 
         <div className = "flex h-screen w-screen items-center justify-center">
 
-          <div className="border-2 border-red-600">
-            <form className = "flex flex-col items-center justify-center">
+          <div className="border-2 border-emerald-600 p-36 rounded-xl">
+            <form 
+              onSubmit = {(e) => submitHandler(e)}
+              className = "flex flex-col items-center justify-center">
                 <input 
-                    className = "text-black outline-none text-xl bg-transparent border-2 border-emerald-600 rounded-full py-4 px-5 placeholder:text-white"  
-                    type = "email" placeholder = "Enter your email" />
+                    className = "text-black outline-none text-xl bg-transparent border-2 border-emerald-600 rounded-full py-4 px-5 placeholder:text-gray-400"  
+                    required
+                    type = "email" 
+                    placeholder = "Enter your email"  
+                    value = {email}
+                    onChange = {(e) => setEmail(e.target.value)}
+                    />
 
                 <input 
-                    className = "text-black outline-none text-xl bg-transparent border-2 border-emerald-600 rounded-full py-4 px-5 mt-3 placeholder:text-white"  
-                    type = "password" placeholder = "Enter password" />
+                    className = "text-black outline-none text-xl bg-transparent border-2 border-emerald-600 rounded-full py-4 px-5 mt-3 placeholder:text-gray-400"  
+                    required
+                    value = {password}
+                    onChange = {(e) => setPassword(e.target.value)}
+                    type = "password" 
+                    placeholder = "Enter password" />
 
-                <button className = " bg-emerald-600 text-white py-4 px-10 rounded-full mt-4"> Login </button>
+                <button className = "mt-5 bg-emerald-600 text-white py-4 px-10 rounded-full "> Login </button>
                 
             </form>
           </div>
