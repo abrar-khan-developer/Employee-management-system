@@ -1,11 +1,13 @@
 import React from 'react'
 import './index.css'
-import Login from './commponent/Auth/Login'
+import EmployeeDashboard from './commponent/Dashboard/EmployeeDashboard'
+// import Login from './commponent/Auth/Login'
 
 function App() {
   return (
     <>
-      <Login />
+      {/* <Login /> */}
+      <EmployeeDashboard />
     </>
   )
 }
