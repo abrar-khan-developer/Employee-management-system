@@ -1,10 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-function Header() {
+function Header({data}) {
+
+  const [userName , setUserName] = useState('')
+
+  useEffect(() => {
+      if(!data){
+        setUserName('Admin')
+      }else{
+        setUserName(data.firstName)
+      }
+  },[])
+
+  const userLogOut = () => {
+    localStorage.setItem('loggedInUser','')
+    window.location.reload()
+  }
+
   return (
-    <div className = "flex items-end justify-between ">
-      <h1 className="text-2xl font-medium">Hello <br /> <span className = "text-3xl font-semibold">Abrar 👋</span>  </h1>
-      <button className='bg-red-600 text-lg font-medium rounded-sm text-white px-5 py-2'>Log Out</button>
+    <div className = "flex items-end justify-between text-white">
+      <h1 className="text-2xl font-medium">Hello <br /> <span className = "text-3xl font-semibold">{userName} 👋</span>  </h1>
+      <button 
+        className='bg-red-600 text-lg font-medium rounded-sm  px-5 py-2'
+        onClick={userLogOut}
+      >Log Out</button>
     </div>
   )
 }
