@@ -1,17 +1,120 @@
-# React + Vite
+# Employee Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Project Overview
 
-Currently, two official plugins are available:
+Employee Management System is a web application built using **React (Vite)** and **Tailwind CSS**. The application provides separate dashboards for **Admin** and **Employee** users after login.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The system allows the **Admin** to assign new tasks to employees, and employees can view and manage their assigned tasks from their own dashboard. All application data is stored using **Local Storage**, so no backend database is required.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- Secure Login Interface
+- Separate Admin Dashboard
+- Separate Employee Dashboard
+- Admin can assign new tasks to employees
+- Employees can view their assigned tasks
+- Task status management (New, Active, Completed, Failed)
+- Local Storage for data persistence
+- Responsive User Interface
+- Fast development with Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# Employee-management-system" 
+---
+
+## 🛠️ Technologies Used
+
+- React.js
+- Vite
+- Tailwind CSS
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- Local Storage
+
+---
+
+## 🚀 How It Works
+
+1. The application starts with a **Login Form**.
+2. Users can log in as either:
+   - **Admin**
+   - **Employee**
+3. After successful login:
+   - The **Admin** is redirected to the **Admin Dashboard**.
+   - The **Employee** is redirected to the **Employee Dashboard**.
+4. The **Admin** can assign new tasks to any employee.
+5. Assigned tasks are stored in **Local Storage**.
+6. Employees can log in to their dashboard and view all tasks assigned to them.
+7. Employees can update the status of their tasks (such as Active, Completed, or Failed).
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+│
+├── components/
+├── context/
+├── utils/
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## ▶️ Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/abrar-khan-developer/Employee-management-system.git
+```
+
+### Navigate to the project folder
+
+```bash
+cd employee-management-system
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run the development server
+
+```bash
+npm run dev
+```
+
+---
+
+## 📚 Learning Source
+
+This project was developed for learning purposes by following the tutorial below:
+
+https://youtu.be/TTx7Y3a7EmA?si=JO_Uc-F19axeJ5Zv
+
+---
+
+## 🎯 Purpose
+
+This project was built to practice and improve skills in:
+
+- React.js
+- Component-Based Architecture
+- State Management
+- Tailwind CSS
+- Local Storage
+- Authentication Flow
+- Dashboard Development
+- Task Management System
+
+---
+
+## 📄 License
+
+This project is created for educational and learning purposes.
