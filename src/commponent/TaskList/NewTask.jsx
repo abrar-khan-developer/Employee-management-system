@@ -1,6 +1,13 @@
 import React from 'react'
 
 function NewTask({data}) {
+  console.log('khan data in accept task',data.newTask,data.active,data.completed,data.failed)
+
+  function AcceptTaskt(){
+    data.newTask = false
+    data.active = true
+    console.log('accept task is working')
+  }
   return (
 
     <div className = "shrink-0 h-full w-75 rounded-xl bg-green-400 p-5">
@@ -14,7 +21,10 @@ function NewTask({data}) {
         <p className = 'text-sm mt-2'>{data.taskDescription}</p>
 
         <div className='mt-4'>
-            <button className='w-full bg-amber-600'> Accept Task </button>
+            <button 
+              className='w-full bg-amber-600 hover:cursor-pointer active:bg-amber-400'
+              onClick={AcceptTaskt}
+              > Accept Task </button>
         </div>
     </div>
   )

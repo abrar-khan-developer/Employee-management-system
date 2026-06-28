@@ -9,3 +9,6 @@ body{
 #taskList::-webkit-scrollbar{
     display:none;
 }
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}

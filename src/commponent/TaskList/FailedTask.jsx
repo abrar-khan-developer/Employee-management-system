@@ -13,7 +13,7 @@ function FailedTask({data}) {
             <p className = 'text-sm mt-2'>{data.taskDescription}</p>
 
             <div className='mt-2'>
-                <button className='w-full bg-red-500'>Failed</button>
+                <button className='w-full bg-red-500 hover:cursor-pointer active:bg-red-300'>Failed</button>
             </div>
         </div>
   )

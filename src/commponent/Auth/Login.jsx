@@ -39,7 +39,7 @@ function Login({handleLogin}) {
                     type = "password" 
                     placeholder = "Enter password" />
 
-                <button className = "mt-5 bg-emerald-600 text-white py-4 px-10 rounded-full "> Login </button>
+                <button className = "mt-5 bg-emerald-600 text-white py-4 px-10 rounded-full hover:cursor-pointer active:bg-emerald-400"> Login </button>
                 
             </form>
           </div>

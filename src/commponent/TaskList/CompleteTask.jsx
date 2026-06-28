@@ -13,7 +13,7 @@ function CompleteTask({data}) {
             <p className = 'text-sm mt-2'>{data.taskDescription}</p>
 
             <div className='mt-2'>
-                <button className='w-full bg-green-500'>Completed</button>
+                <button className='w-full bg-green-500 hover:cursor-pointer active:bg-green-300'>Completed</button>
             </div>
       </div>
   )

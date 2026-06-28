@@ -16,7 +16,14 @@ function CreateTask() {
     const handlerSubmit = (e) => {
 
         e.preventDefault()
+
+        if(taskTitle == "" || taskDesc == "" || taskDate == "" || assignTo == "" || taskCategory == ""){
+            alert('All Field is required')
+            return null
+        }
+
         setNewTask({taskTitle, taskDescription : taskDesc, taskDate, assignTo, category: taskCategory, active:false, newTask:true, failed:false, completed:false })
+
         const data = userData.employees
         data.forEach((elem) => {
             // console.log(elem)
@@ -26,10 +33,11 @@ function CreateTask() {
                 // console.log('yehi h',elem)
             }
         })
-        setUserData({
-            ...userData,
-            employees : data
-        })
+
+        // setUserData({
+        //     ...userData,
+        //     employees : data
+        // })
     }
   return (
      <div className='p-5 bg-[#1c1c1c] mt-7 roounded'>
@@ -59,7 +67,7 @@ function CreateTask() {
                             setTaskDate(e.target.value)
                         }}
                         type = "date"  
-                        className="text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border border-gray-400 mb-4"
+                        className="text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border border-gray-400 mb-4 "
                     />
                     </div>
                     <div>
@@ -107,7 +115,7 @@ function CreateTask() {
 
                     </textarea>
                     <button
-                        className='bg-emerald-500 py-3 hover:bg-emerald-600 px-5 text-sm rounded mt-4 w-full'
+                        className='bg-emerald-500 py-3 hover:bg-emerald-600 px-5 text-sm rounded mt-4 w-full hover:cursor-pointer active:bg-emerald-300'
                       >
                         Create Task
                     </button>
