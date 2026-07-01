@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function AccesptTask({data}) {
     // console.log('khan data in accept task',data.newTask,data.active,data.completed,data.failed)
 
+    const [val , setVal] = useState(1)
+    
     function Complete(){
         data.active = false
         data.completed = true
